@@ -13,10 +13,10 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"",
-    "build": "",
-    "install-client": "",
-    "start": ""
+    "test": "echo \"error no test specified\" && exit 1",
+    "build": "cd /seeders && npm run seed.js",
+    "install-client": "npm run install && npm ",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
