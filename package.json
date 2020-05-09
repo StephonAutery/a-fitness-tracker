@@ -1,27 +1,24 @@
 {
   "name": "a-fitness-tracker",
   "version": "1.0.0",
-  "description": "Stephon Autery's implementation of UCBerkeley Extension's Coding Bootcamp Fitness Tracker Excercise",
+  "description": "a fitness tracker.",
   "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-router": "0.0.1",
-    "mongodb": "^3.5.7",
-    "mongoose": "^5.9.12",
-    "path": "^0.12.7",
-    "webpack-dev-server": "^3.10.3"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"error no test specified\" && exit 1",
-    "build": "cd /seeders && npm run seed.js",
-    "install-client": "npm run install && npm ",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StephonAutery/a-fitness-tracker.git"
   },
+  "keywords": [
+    "UC",
+    "Berkeley",
+    "Extension",
+    "Coding",
+    "Bootcamp"
+  ],
   "author": "Stephon Autery",
   "license": "ISC",
   "bugs": {
