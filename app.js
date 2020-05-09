@@ -20,7 +20,7 @@ const mongoose = require("mongoose");
 // Local host MongoDB connection
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
 // Heroku MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_cx59x5c3:mgt2lm80kott2k6hiens8dj34d@ds121190.mlab.com:21190/heroku_cx59x5c3",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://stephona:get1onit@ds121190.mlab.com:21190/heroku_cx59x5c3",
 {
     useNewUrlParser: true,
     useFindAndModify: false
