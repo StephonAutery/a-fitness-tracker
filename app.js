@@ -22,9 +22,12 @@ const mongoose = require("mongoose");
 // Heroku MongoDB connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://stephona:get1onit@ds121190.mlab.com:21190/heroku_cx59x5c3",
 {
-    useNewUrlParser: true,
-    useFindAndModify: false
+    useMongoClient: true
+    // useNewUrlParser: true,
+    // useFindAndModify: false
 });
+
+![MongoDB_URI](images/MONGODB_URI.png);
 
 // load routes
 app.use(require("./routes/apiRoutes.js"));

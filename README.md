@@ -8,4 +8,4 @@ The fitness tracker allows users to view create and track daily workouts. The us
 [fitness tracker on GitHub](https://github.com/StephonAutery/a-fitness-tracker)
 
 # deployed app on Heroku
-[fitness tracker on Heroku](https://stark-harbor-42519.herokuapp.com/)
+[fitness tracker on Heroku](https://afternoon-brushlands-64105.herokuapp.com/)
