@@ -38,7 +38,7 @@ Thumbs.db
 
 # files #
 ######################
-index*
+node_modules*
 package-lock*
 package*
 Packages*

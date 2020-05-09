@@ -5,6 +5,7 @@ const API = {
     try {
       console.log("fail: /api/workouts");
       res = await fetch("/api/workouts");
+      console.log(res);
     } catch (err) {
       console.log(err)
     }

@@ -6,6 +6,7 @@ router.get("/api/workouts", (req, res) => {
   Workout.find({})
     .sort({ date: 1 })
     .then(dbWorkout => {
+      console.log(dbWorkout[0].exercises);
       res.send(dbWorkout);
     })
     .catch(err => {
