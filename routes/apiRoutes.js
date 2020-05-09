@@ -5,9 +5,9 @@ const path = require("path");
 router.get("/api/workouts", (req, res) => {
   Workout.find({})
     .sort({ date: 1 })
-    .then(dbWorkout => {
-      console.log(dbWorkout[0].exercises);
-      res.send(dbWorkout);
+    .then(workout => {
+      console.log(workout[0].exercises);
+      res.send(workout);
     })
     .catch(err => {
       res.status(400).send(err);
@@ -43,8 +43,8 @@ router.post("/api/workouts", (req, res) => {
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
     .sort({ date: 1 })
-    .then(dbWorkout => {
-      res.send(dbWorkout);
+    .then(workout => {
+      res.send(workout);
     })
     .catch(err => {
       res.status(400).json(err);

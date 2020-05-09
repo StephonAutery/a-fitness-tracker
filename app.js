@@ -2,8 +2,6 @@
 var express = require("express");
 // create a pointer to the express server
 var app = express();
-const mongoose = require("mongoose");
-
 // process.env.PORT lets the port be set by Heroku
 var PORT = process.env.PORT || 8080;
 
@@ -14,14 +12,21 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+
+// use mongoose
+const mongoose = require("mongoose");
 // mongoose
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
+// Local host MongoDB connection
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
+// Heroku MongoDB connection
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_cx59x5c3:mgt2lm80kott2k6hiens8dj34d@ds121190.mlab.com:21190/heroku_cx59x5c3",
 {
     useNewUrlParser: true,
     useFindAndModify: false
 });
 
-// routes
+// load routes
 app.use(require("./routes/apiRoutes.js"));
 
 // start express app.
