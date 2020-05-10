@@ -18,16 +18,16 @@ app.use(express.json());
 const mongoose = require("mongoose");
 // mongoose
 // Local host MongoDB connection
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
+mongoose.connect(process.env.MongoDB_URI || "mongodb://localhost/workout",
 // Heroku MongoDB connection
-mongoose.connect(process.env.MongoDB_URII || "mongodb://stephona:get1onit@ds257097.mlab.com:57097/heroku_3llgxkvh",
+// mongoose.connect(process.env.MongoDB_URII || "mongodb://stephona:get1onit@ds257097.mlab.com:57097/heroku_3llgxkvh",
 {
-    // useMongoClient: true
+
     // useNewUrlParser: true,
     // useFindAndModify: false
 });
 
-![MongoDB_URI](images/MONGODB_URI.png);
+// ![MongoDB_URI](images/MONGODB_URI.png);
 
 // load routes
 app.use(require("./routes/apiRoutes.js"));
