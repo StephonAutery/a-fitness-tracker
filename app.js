@@ -27,6 +27,7 @@ mongoose.connect(process.env.MongoDB_URI || "mongodb://localhost/workout",
     // useFindAndModify: false
 });
 
+
 // ![MongoDB_URI](images/MONGODB_URI.png);
 
 // load routes
