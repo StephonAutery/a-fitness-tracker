@@ -18,7 +18,7 @@ const mongoose = require("mongoose");
 // Local host MongoDB connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
 // Heroku MongoDB connection
-// mongoose.connect(process.env.MongoDB_URII || "mongodb://stephona:get1onit@ds257097.mlab.com:57097/heroku_3llgxkvh",
+// mongoose.connect(process.env.MongoDB_URII || "mongodb://stephon:git1go@ds127293.mlab.com:27293/heroku_7swtxr41",
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
