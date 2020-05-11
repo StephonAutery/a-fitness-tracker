@@ -18,7 +18,6 @@ router.put("/api/workouts/:id", (req, res) => {
   Workout.findById(req.params.id, function (err, workoutById) {
     const objExercise = workoutById.exercises;
     objExercise.push(req.body);
-
     try {
       const updated = workoutById.save();   
       return res.status(200).send(updated)
@@ -27,7 +26,6 @@ router.put("/api/workouts/:id", (req, res) => {
       return res.status(500).send(err);
     }
   });
-
 })
 
 // api/workouts (post)/create
