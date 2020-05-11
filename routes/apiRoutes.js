@@ -6,7 +6,7 @@ router.get("/api/workouts", (req, res) => {
   Workout.find({})
     .sort({ date: 1 })
     .then(workout => {
-      console.log(workout[0].exercises);
+      // console.log(workout[0].exercises);
       res.send(workout);
     })
     .catch(err => {
@@ -30,8 +30,7 @@ router.put("/api/workouts/:id", (req, res) => {
 
 })
 
-
-// /api/workoutes (post)/create
+// api/workouts (post)/create
 router.post("/api/workouts", (req, res) => {
   const newWorkoutObj = new Workout(req.body);
   newWorkoutObj.save(err => {
@@ -40,6 +39,7 @@ router.post("/api/workouts", (req, res) => {
   });
 });
 
+// stats
 router.get("/api/workouts/range", (req, res) => {
   Workout.find({})
     .sort({ date: 1 })
@@ -53,11 +53,12 @@ router.get("/api/workouts/range", (req, res) => {
 
 router.get("/exercise", (req, res) => {
   // console.log(req.body);
-  res.sendFile(path.join(__dirname + '/../public/exercise.html'));
+  res.sendFile(path.resolve(__dirname + '/../public/exercise.html'));
 });
 
 router.get("/stats", (req, res) => {
-  res.sendFile(path.join(__dirname + '/../public/stats.html'));
+  console.log(__dirname);
+  res.sendFile(path.resolve(__dirname + '/../public/stats.html'));
 });
 
 module.exports = router;

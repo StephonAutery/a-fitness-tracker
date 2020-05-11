@@ -12,8 +12,6 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-
 // use mongoose
 const mongoose = require("mongoose");
 // mongoose
@@ -22,11 +20,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
 // Heroku MongoDB connection
 // mongoose.connect(process.env.MongoDB_URII || "mongodb://stephona:get1onit@ds257097.mlab.com:57097/heroku_3llgxkvh",
 {
-
-    // useNewUrlParser: true,
-    // useFindAndModify: false
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
-
 
 // ![MongoDB_URI](images/MONGODB_URI.png);
 

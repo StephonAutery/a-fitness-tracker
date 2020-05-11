@@ -5,7 +5,7 @@ const API = {
     try {
       console.log("fail: /api/workouts");
       res = await fetch("/api/workouts");
-      console.log(res);
+
     } catch (err) {
       console.log(err)
     }
@@ -16,7 +16,9 @@ const API = {
 
   async addExercise(data) {
     const id = location.search.split("=")[1];
+    console.log("|-----");
     console.log(data);
+    console.log("------|");
     const res = await fetch("/api/workouts/" + id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -29,7 +31,7 @@ const API = {
   },
 
   async createWorkout(data = {}) {
-    console.log("fail: POST /api/workouts");
+    // console.log("fail: POST /api/workouts");
     const res = await fetch("/api/workouts", {
       method: "POST",
       body: JSON.stringify(data),
@@ -42,7 +44,7 @@ const API = {
   },
 
   async getWorkoutsInRange() {
-    console.log("fail: /api/workouts/range");
+    // console.log("fail: /api/workouts/range");
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();
 

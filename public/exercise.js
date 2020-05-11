@@ -16,7 +16,7 @@ const newWorkout = document.querySelector(".new-workout")
 
 let workoutType = null;
 let shouldNavigateAway = false;
-console.log("excercise.js - you made it ...")
+// console.log("excercise.js - you made it ...");
 async function initExercise() {
   let workout;
 
